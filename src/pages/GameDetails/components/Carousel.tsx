@@ -49,7 +49,7 @@ function Carousel(props: Props) {
       setIndex(childrenArray.length - 1);
     }
     setIndexByTimeout();
-    return () => clearTimeout(timeout.current);
+    return () => clearTimeout(timeout.current as number | undefined);
   }, [index]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
@@ -61,7 +61,7 @@ function Carousel(props: Props) {
         className="Items"
         drag="x"
         dragMomentum={false}
-        onDragStart={() => clearTimeout(timeout.current)}
+        onDragStart={() => clearTimeout(timeout.current as number | undefined)}
         onDragEnd={setIndexByPosition}
         initial={{ x: 0 }}
         animate={carouselControls}
