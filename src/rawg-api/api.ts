@@ -1,7 +1,9 @@
 const api = {
     url: 'https://api.rawg.io/api/',
-    key: "f59f6f4570b44f24833e1a07054ccad0",
+    key: (import.meta.env.VITE_RAWG_API_KEY as string)  ,
   };
+
+
   
 
   console.log(api.key);

@@ -4,6 +4,7 @@ import App from './App';
 import './fonts/GTWalsheimPro/stylesheet.css';
 import './scss/index.scss';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <HashRouter>
