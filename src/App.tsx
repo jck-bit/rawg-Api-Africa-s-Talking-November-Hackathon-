@@ -3,7 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { Header, Cart, Payment, Completion } from './components';
 import { gameList } from './rawg-api';
-import { Home, GameList, GameDetails, NotFound } from './pages';
+import { Home, GameList, GameDetails, NotFound, Login, Register } from './pages';
 import getPrice from './utils/getPrice'
 import { Game } from './types/Game.types';
 import './scss/App.scss';
@@ -70,6 +70,8 @@ function App() {
           </Route>
           <Route path="payment" element={<Payment />} />
           <Route path="completion" element={<Completion />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
         </Routes>
       </AnimatePresence>
     </div>
