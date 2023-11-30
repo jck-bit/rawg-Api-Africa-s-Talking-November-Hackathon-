@@ -3,10 +3,6 @@ const api = {
     key: (import.meta.env.VITE_RAWG_API_KEY as string)  ,
   };
 
-
-  
-
-  console.log(api.key);
   const cachedRequests: Record<string, unknown> =
     JSON.parse(localStorage.getItem('cachedRequests') || '{}');
   

@@ -5,7 +5,7 @@ import { Game } from '../types/Game.types';
 import Transition from './Transition';
 import CartItem from './CartItem';
 import Button from './Button';
-
+import { useNavigate } from 'react-router-dom';
 interface Props {
   cartItems: Game[],
   setIsCartOpen: (isCartOpen: boolean) => void,
@@ -13,6 +13,17 @@ interface Props {
 }
 
 function Cart(props: Props) {
+  const navigate = useNavigate();
+
+  const handleCheckout = async () => {
+    
+    // #navigate to the payment page 
+    if(props.cartItems.length > 0){
+      navigate('/payment');
+    }
+  };
+
+
   const {
     cartItems,
     setIsCartOpen,
@@ -74,7 +85,7 @@ function Cart(props: Props) {
         </div>
         <div className="Checkout">
           <div>Total: ${+totalPrice}</div>
-          <Button>Checkout <RiArrowRightLine /></Button>
+          <Button handleClick={handleCheckout}>Checkout <RiArrowRightLine /></Button>
         </div>
       </motion.div>
     </>
