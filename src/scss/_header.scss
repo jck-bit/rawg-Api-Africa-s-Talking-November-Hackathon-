@@ -6,6 +6,18 @@
   transition: 0.35s !important;
 }
 
+.section-pay{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.h1-check{
+  display: flex;
+  justify-content: center;
+}
+
 .Header {
   width: 100%;
   padding: 20px clamp(10px, 3vw, 50px);
